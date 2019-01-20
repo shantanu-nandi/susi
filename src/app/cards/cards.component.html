@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let card of cards">
+      <app-card 
+        [imageUrl]="card.imageUrl" 
+        [cardTitle]="card.cardTitle"
+        [cardText]="card.cardText"
+        [features]="card.features"
+        [siteUrl]="card.siteUrl">
+      </app-card>
+    </div>
+  </div>
