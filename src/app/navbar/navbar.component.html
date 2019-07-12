@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <fa-icon class="text-primary" [icon]="['fas', 'strikethrough']" size="3x"></fa-icon>
+  <a class="navbar-brand" routerLink="/">
+    <fa-icon class="text-primary" [icon]="['fas', 'strikethrough']" size="2x"></fa-icon>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <button (click)="isExpanded = !isExpanded" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <fa-icon class="text-primary" [icon]="['fas', 'bars']" size="2x"></fa-icon>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div [class.show]="isExpanded" class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" routerLink="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" routerLink="/">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" routerLink="/contact">Contact</a>
       </li>
       <li class="nav-item">
-        <button class="nav-link btn btn-outline-primary" href="#">
+        <button class="nav-link btn btn-outline-primary" href="tel:91-8125995698">
           (+91) 8125995698
         </button>
       </li>

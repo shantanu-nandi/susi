@@ -1,0 +1,10 @@
+<div id="technologies" class="container mb-4" *ngFor="let technology of technologies; let i = index">
+  <div class="row">
+    <div class="col-sm-12 col-md-6" *ngIf="i % 2 != 0"></div>
+    <div class="col-sm-12 col-md-6">
+      <app-technology [title]="technology.title" [items]="technology.items">
+      </app-technology>
+    </div>
+    <div class="col-sm-12 col-md-6" *ngIf="i % 2 == 0"></div>
+  </div>
+</div>
