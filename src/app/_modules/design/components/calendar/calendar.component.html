@@ -1,0 +1,50 @@
+  <div [ngClass]="'d-flex justify-content-center py-4 mb-0 ' + bg">
+    <div>
+      <span (click)="onPreviousYear()" class="btn btn-sm btn-link text-white">
+        <fa-icon class="text-white" [icon]="['fas', 'less-than']"></fa-icon>
+        <fa-icon class="text-white" [icon]="['fas', 'less-than']"></fa-icon>
+      </span>
+    </div>
+
+    <div>
+      <span (click)="onPreviousMonth()" class="btn btn-sm btn-link text-white">
+        <fa-icon class="text-white" [icon]="['fas', 'less-than']"></fa-icon>
+      </span>
+    </div>
+
+    <p class="h4 text-uppercase text-white">
+      {{fullMonthName}} {{fullYear}}
+    </p>
+
+    <div>
+      <span (click)="onNextMonth()" class="btn btn-sm btn-link text-white">
+        <fa-icon class="text-white" [icon]="['fas', 'greater-than']"></fa-icon>
+      </span>
+    </div>
+
+    <div>
+      <span (click)="onNextYear()" class="btn btn-sm btn-link text-white">
+        <fa-icon class="text-white" [icon]="['fas', 'greater-than']"></fa-icon>
+        <fa-icon class="text-white" [icon]="['fas', 'greater-than']"></fa-icon>
+      </span>
+    </div>
+  </div>
+
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th class="border-bottom-0" scope="col">M</th>
+        <th class="border-bottom-0" scope="col">T</th>
+        <th class="border-bottom-0" scope="col">W</th>
+        <th class="border-bottom-0" scope="col">T</th>
+        <th class="border-bottom-0" scope="col">F</th>
+        <th class="border-bottom-0" scope="col">S</th>
+        <th class="border-bottom-0" scope="col">S</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let week of weeks">
+        <td *ngFor="let date of week" [class]="getCellClass(date)">{{date && date.getDate()}}</td>
+      </tr>
+    </tbody>
+  </table>

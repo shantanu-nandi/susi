@@ -1,0 +1,46 @@
+<div class="row mx-0 p-0 mx-lg-3 mx-xl-5">
+  <div class="d-none d-md-block col-md-4 col-lg-3">
+
+    <div class="mb-2">
+      <app-recent-post></app-recent-post>
+    </div>
+
+    <div class="mb-2">
+      <app-popular-post></app-popular-post>
+    </div>
+
+    <app-ad-list></app-ad-list>
+  </div>
+
+  <div class="col-md-8 col-lg-6 m-0 px-0 px-sm-2">
+    <app-posts [model]="posts"></app-posts>
+  </div>
+
+  <div class="d-none d-lg-block col-lg-3">
+    <div class="mb-2">
+      <input type="text" class="form-control" placeholder="keyword here..." (keyup.enter)="onSearch($event)">
+    </div>
+
+    <div class="mb-2">
+      <app-category-list></app-category-list>
+    </div>
+
+    <div class="mb-2">
+      <app-tag-list></app-tag-list>
+    </div>
+
+    <div class="mb-2">
+      <app-survey></app-survey>
+    </div>
+
+    <div class="mb-2">
+      <app-subscribe></app-subscribe>
+    </div>
+  </div>
+</div>
+
+<!--<div class="d-flex flex-row-reverse fixed-bottom">
+  <a routerLink="/blog/create-post" title="Create a new post" class="shadow-lg text-primary pr-2 pb-2">
+    <fa-icon [icon]="['fa', 'plus-circle']" size="2x"></fa-icon>
+  </a>
+</div>-->

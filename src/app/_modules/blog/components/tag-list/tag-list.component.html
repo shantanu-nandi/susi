@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body font-weight-bold">
+    <p class="mb-2 text-primary text-uppercase">Tags</p>
+    <p>
+      <span *ngFor="let tag of tags"
+        [ngClass]="getBadgeClass(tag)"
+        class="badge badge-pill mr-2 mb-1">{{tag.name}}</span>
+    </p>
+  </div>
+</div>

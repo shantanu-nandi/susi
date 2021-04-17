@@ -1,0 +1,23 @@
+.timer {
+  margin-top: 40px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+}
+
+.wrapper {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  padding-top: 20px;
+  margin: 0 7px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 60px;
+  line-height: 70px;
+}

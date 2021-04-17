@@ -1,0 +1,28 @@
+<div class="card">
+  <img [src]="model.imageUrl || 'assets/placeholder.png'" class="card-img-top" [alt]="model.title + '- image'">
+  <div class="card-body">
+    <span *ngIf="model.category" class="badge badge-info">{{model.category.name | titlecase}}</span>
+    <h5 class="card-title font-weight-bold">{{model.title}}</h5>
+    <p class="card-text">{{model.description}}</p>
+
+    <div class="d-flex flex-row flex-md-column flex-lg-row mb-4">
+      <div>
+        <span class="mr-2 text-primary">
+          <fa-icon [icon]="['fa', 'user-circle']"></fa-icon>
+        </span>
+        <span class="mr-3">By {{model.createdBy | titlecase}}</span>
+      </div>
+
+      <div>
+        <span class="mr-2 text-primary">
+          <fa-icon [icon]="['fa', 'calendar-week']"></fa-icon>
+        </span>
+        <span>{{model.createdDate | date }}</span>
+      </div>
+    </div>
+
+    <p>
+      <span *ngFor="let tag of model.tags" class="badge badge-primary mr-2 mb-1">{{tag}}</span>
+    </p>
+  </div>
+</div>

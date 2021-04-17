@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="d-flex">
+    <div class="d-none d-md-block py-3 border-right" style="width: 280px">
+      <!--<button class="btn btn-sm btn-outline-primary rounded-pill mb-2 d-block ml-auto">
+        <fa-icon class="px-2" [icon]="['fa', 'plus']"></fa-icon>
+      </button>
+
+      <div *ngFor="let cat of categories; let i=index">
+        <h6 class="font-weight-bold mb-2 ml-0">
+          <div [ngClass]="'small-circle border-' + getThemeName(i)"></div> {{cat.name}}
+        </h6>
+        <ul class="list-unstyled ml-3">
+          <li *ngFor="let item of cat.items" class="pb-1">
+            <a routerLink="/todo" [queryParams]="{cat: cat.name, item: item }"
+              [routerLinkActive]="'text-'+ getThemeName(i)">{{item}}</a>
+          </li>
+        </ul>
+      </div>-->
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="mt-3 flex-fill">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-10">
+            <div class="row">
+              <div class="col-8">
+                <div class="form-group has-search">
+                  <span class="form-control-feedback">
+                    <fa-icon class="text-gray" [icon]="['fa', 'search']"></fa-icon>
+                  </span>
+                  <input type="text" class="form-control rounded-pill" placeholder="Search Here"
+                    (keyup.enter)="onSearchCriteriaChange($event)">
+                </div>
+              </div>
+              <div class="col-4 d-flex flex-row-reverse">
+                <div>
+                  <button class="btn btn-primary rounded-pill px-3">
+                    <fa-icon class="text-white mr-1" [icon]="['fa', 'plus']"></fa-icon>
+                    <span class="d-none d-md-inline-block ml-1">Add New Todo</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="font-weight-bold my-3 mb-4">{{selectedItem}}</h5>
+
+            <ul class="nav nav-tabs font-weight-bold">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/todo" queryParamsHandling="merge" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: true}">All Todo's</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/todo" [queryParams]="{tab: 'upcoming' }" queryParamsHandling="merge"
+                  routerLinkActive="active">Upcoming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/todo" [queryParams]="{tab: 'completed' }" queryParamsHandling="merge"
+                  routerLinkActive="active">Completed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/todo" [queryParams]="{tab: 'others' }" queryParamsHandling="merge"
+                  routerLinkActive="active">Others</a>
+              </li>
+            </ul>
+
+            <div class="row mt-3">
+              <div *ngFor="let todo of todos" class="col-12 col-md-6 col-lg-4 mb-4">
+                <app-todo-item [model]="todo"></app-todo-item>
+              </div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

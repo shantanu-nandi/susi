@@ -1,0 +1,9 @@
+.email-text {
+  max-width: 300px
+}
+
+@media only screen and (max-width: 600px) {
+  .email-text {
+    max-width: 240px
+  }
+}

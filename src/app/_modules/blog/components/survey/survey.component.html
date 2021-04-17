@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <p class="mb-2 text-primary font-weight-bold text-uppercase">Survey</p>
+
+    <p class="border-bottom pb-2 mb-0">
+      What front-end framework do you use?
+    </p>
+
+    <ul class="list-group list-group-flush mb-3">
+      <li *ngFor="let option of options" class="list-group-item pl-0">
+        <div class="form-group form-check m-0">
+          <input type="checkbox" class="form-check-input" [id]="option + 'Check'">
+          <label class="form-check-label ml-2" [for]="option + 'Check'">{{option}}</label>
+        </div>
+      </li>
+    </ul>
+
+    <div class="row text-center">
+      <div class="col">
+        <button class="btn btn-sm btn-primary btn-block mr-2">Vote</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-sm btn-outline-primary btn-block">Result</button>
+      </div>
+    </div>
+  </div>
+</div>

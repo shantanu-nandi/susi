@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div *ngIf="model.imageUrl" class="col-sm-12 col-md-5">
+        <img [src]="model.imageUrl" class="img-fluid pb-2" [alt]="model.title + ' - image'">
+      </div>
+
+      <div class="col">
+        <h5 class="mt-0 font-weight-bold">
+          <a [routerLink]="'/blog/posts/' + model.postId" class="text-dark">{{model.title}}</a>
+        </h5>
+
+        <div class="d-flex flex-row flex-md-column flex-lg-row">
+          <div>
+            <span class="mr-2 text-primary">
+              <fa-icon [icon]="['fa', 'user-circle']"></fa-icon>
+            </span>
+            <span class="mr-3">By {{model.createdBy | titlecase}}</span>
+          </div>
+
+          <div>
+            <span class="mr-2 text-primary">
+              <fa-icon [icon]="['fa', 'calendar-week']"></fa-icon>
+            </span>
+            <span>{{model.createdDate | date }}</span>
+          </div>
+        </div>
+
+        <p class="my-2">{{showFullDescription ? model.description : (model.description | truncate: 98)}}</p>
+
+        <button (click)="showFullDescription = !showFullDescription"
+          *ngIf="model.description && model.description.length > 98"
+          class="btn btn-sm btn-primary">{{ showFullDescription ? '<< Read Less' : 'Read more >>'}}</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="card h-100">
+  <div class="card-body">
+    <h5 [ngClass]="'card-title text-uppercase font-weight-bold mb-3 ' + getTitleClass()">
+      {{getItemStatus()}}
+    </h5>
+
+    <h6 class="card-subtitle font-weight-bold">
+      {{model.title}}
+    </h6>
+    <span class="text-muted small d-block mb-4">
+      {{model.createdDate | date}}
+    </span>
+
+    <button [ngClass]="'btn rounded-pill ' + getButtonClass()">Mark as done</button>
+  </div>
+</div>

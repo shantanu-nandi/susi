@@ -1,0 +1,13 @@
+<div class="card">
+  <img [src]="imageUrl" height="220" class="card-img-top" [alt]="cardTitle">
+  <div class="card-body">
+    <h5 class="card-title">{{cardTitle}}</h5>
+    <p class="card-text">{{cardText}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let feature of features">{{feature}}</li>
+  </ul>
+  <div class="card-body">
+    <a [href]="siteUrl" target="blank" class="btn btn-block btn-secondary text-uppercase">Visit Site For More</a>
+  </div>
+</div>

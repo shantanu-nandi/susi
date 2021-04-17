@@ -1,0 +1,26 @@
+<div>
+  <div class="d-flex flex-row px-0 pt-2 pb-2">
+    <div class="flex-fill mx-2">
+      <input (keyup)="onSearchChange($event.target.value)" type="text" class="form-control" placeholder="Search...">
+    </div>
+
+    <div ngbDropdown class="d-block d-md-none">
+      <button class="btn btn-sm btn-link text-muted pl-2 rounded-0" id="dropdownSideNav" ngbDropdownToggle>
+        <fa-icon [icon]="['fas', 'bars']" size="2x"></fa-icon>
+      </button>
+      <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSideNav">
+        <a ngbDropdownItem *ngFor="let item of filteredItems" [routerLink]="item.routerLink">
+          {{item.text}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-group d-none d-md-block mb-3" id="list-tab" role="tablist">
+    <a *ngFor="let item of filteredItems" class="list-group-item list-group-item-action border-right-0" data-toggle="list"
+      [routerLink]="item.routerLink" routerLinkActive="active" role="tab">
+      <span class="mr-2"><fa-icon [icon]="['fas', item.icon]"></fa-icon></span>
+      {{item.text}}
+    </a>
+  </div>
+</div>

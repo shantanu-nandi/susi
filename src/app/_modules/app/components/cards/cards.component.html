@@ -1,0 +1,11 @@
+<div class="container-fluid row mx-0 px-0 mx-sm-auto px-sm-auto">
+    <div class="col-12 col-md-6 col-lg-4 mb-2 mb-sm-4" *ngFor="let card of cards">
+      <app-card 
+        [imageUrl]="card.imageUrl" 
+        [cardTitle]="card.cardTitle"
+        [cardText]="card.cardText"
+        [features]="card.features"
+        [siteUrl]="card.siteUrl">
+      </app-card>
+    </div>
+  </div>

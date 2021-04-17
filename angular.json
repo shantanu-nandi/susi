@@ -26,8 +26,38 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "extractCss": true,
             "styles": [
-              "src/styles.scss"
+              {
+                "input": "src/scss/loctas/styles.scss",
+                "bundleName": "loctas",
+                "lazy": true
+              },
+              {
+                "input": "src/scss/cosmo/styles.scss",
+                "bundleName": "cosmo",
+                "lazy": true
+              },
+              {
+                "input": "src/scss/litera/styles.scss",
+                "bundleName": "litera",
+                "lazy": true
+              },
+              {
+                "input": "src/scss/lumen/styles.scss",
+                "bundleName": "lumen",
+                "lazy": true
+              },
+              {
+                "input": "src/scss/minty/styles.scss",
+                "bundleName": "minty",
+                "lazy": true
+              },
+              {
+                "input": "src/scss/pulse/styles.scss",
+                "bundleName": "pulse",
+                "lazy": true
+              }
             ],
             "scripts": []
           },
@@ -55,6 +85,13 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "en": {
+              "aot": true,
+              "outputPath": "dist/susi/bn",
+              "i18nFile": "src/locale/messages.bn.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "bn"
             }
           }
         },
@@ -66,6 +103,9 @@
           "configurations": {
             "production": {
               "browserTarget": "susi:build:production"
+            },
+            "en": {
+              "browserTarget": "susi:build:en"
             }
           }
         },
@@ -102,6 +142,26 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
+        },
+        "xliffmerge": {
+          "builder": "@ngx-i18nsupport/tooling:xliffmerge",
+          "options": {
+            "xliffmergeOptions": {
+              "i18nFormat": "xlf",
+              "srcDir": "src/locale",
+              "genDir": "src/locale",
+              "defaultLanguage": "en",
+              "languages": [
+                "en",
+                "bn",
+                "fr"
+              ]
+            }
           }
         }
       }

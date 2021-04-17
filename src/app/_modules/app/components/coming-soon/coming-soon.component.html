@@ -1,0 +1,27 @@
+<div class="jumbotron rounded-0 text-center text-white"
+  style="background: url('assets/apple-mouse-artificial-flowers-blurred-background.jpg') no-repeat fixed center">
+  <h2 class="display-4 text-uppercase text-white mb-4">React Version is Coming Soon</h2>
+
+  <p class="h3 text-white">I'm working very hard on the new version of my site. It will bring a lot of new features.
+    Stay
+    tuned!</p>
+
+  <app-timer></app-timer>
+</div>
+
+<div class="text-center my-5 py-0 py-md-5 px-4">
+  <h2 class="display-5 text-uppercase mb-4">Subscribe to my newsletter </h2>
+
+  <p class="h5 mb-4">Sign up now to my newsletter and you'll be one of the first to know when the site is ready</p>
+
+  <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex justify-content-center input-group">
+      <input type="email" class="form-control email-text" placeholder="Enter your email..."
+        aria-label="Recipient's email" aria-describedby="button-addon" formControlName="email">
+      <div class="input-group-append">
+        <button class="btn btn-primary text-uppercase" type="submit"
+          id="button-addon">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>

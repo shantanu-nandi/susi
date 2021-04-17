@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div *ngFor="let timelineItem of timelineItems; let ci = index" class="timeline-item"
+    [attr.date-is]="timelineItem.duration">
+    <h2>{{timelineItem.title}} <span *ngIf="ci === 0" class="badge badge-info">New</span></h2>
+
+    <h5 class="font-weight-bold mb-4">{{timelineItem.subtitle}}</h5>
+
+    <ul *ngIf="timelineItem.activities" class="list-group list-group-flush mb-5">
+      <li *ngFor="let activity of timelineItem.activities" class="list-group-item pl-0">{{activity}}</li>
+    </ul>
+
+    <div *ngIf="timelineItem.tags">
+      <span *ngFor="let tag of timelineItem.tags; let i = index"
+        [ngClass]="['badge badge-pill px-4 py-2 mr-2 mb-2 badge-' + getBadgeName(i)]">
+        {{tag}}
+      </span>
+    </div>
+  </div>
+</div>

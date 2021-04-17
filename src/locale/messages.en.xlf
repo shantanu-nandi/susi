@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="en">
+    <body>
+      <trans-unit id="app-nav-link-home" datatype="html">
+        <source>Home</source><target state="final">Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> navigation link for home page</note>
+        <note priority="1" from="meaning">navigation link </note>
+      </trans-unit>
+      <trans-unit id="app-nav-link-about" datatype="html">
+        <source>About</source><target state="final">About</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description"> navigation link for about page</note>
+        <note priority="1" from="meaning">navigation link </note>
+      </trans-unit>
+      <trans-unit id="app-nav-link-contact" datatype="html">
+        <source>Contact</source><target state="final">Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description"> navigation link for contact page</note>
+        <note priority="1" from="meaning">navigation link </note>
+      </trans-unit>
+      <trans-unit id="app-contact-number" datatype="html">
+        <source>
+          (+91) 9391444524
+        </source><target state="final">
+          (+91) 9391444524
+        </target>
+        
+        <note priority="1" from="description"> my contact number</note>
+        <note priority="1" from="meaning">contact number </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/navbar/navbar.component.html</context><context context-type="linenumber">27</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/footer/footer.component.html</context><context context-type="linenumber">7</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/contact/contact.component.html</context><context context-type="linenumber">42</context></context-group></trans-unit><trans-unit id="app-footer-contact-me" datatype="html">
+        <source>Contact Me</source><target state="final">Contact Me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-footer-get-in-touch" datatype="html">
+        <source>Get In Touch</source><target state="final">Get In Touch</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-mailing-address" datatype="html">
+        <source>
+          1-111/17/16, Kondapur, Hyderabad, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> Telangana, India 500084 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>(+91) 9391444524
+        </source><target state="final">
+          1-111/17/16, Kondapur, Hyderabad, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> Telangana, India 500084 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>(+91) 9391444524
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">my current address</note>
+      </trans-unit><trans-unit id="app-footer-follow-me" datatype="html">
+        <source>Follow Me</source><target state="final">Follow Me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-nav-link-react" datatype="html">
+        <source>Now you are viewing <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Angular<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>
+      version. <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>React<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> version is coming soon.</source><target state="final">Now you are viewing <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Angular<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>
+      version. <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>React<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> version is coming soon.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> navigation link for upcoming react page</note>
+        <note priority="1" from="meaning">react link </note>
+      </trans-unit><trans-unit id="app-header-author-first-name" datatype="html">
+        <source>Shantanu </source><target state="final">Shantanu </target>
+        
+        <note priority="1" from="description"> hero section header author first name</note>
+        <note priority="1" from="meaning">author first name </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/hero-section/hero-section.component.html</context><context context-type="linenumber">4</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/contact/contact.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit><trans-unit id="app-header-author-last-name" datatype="html">
+        <source>Nandi</source><target state="final">Nandi</target>
+        
+        <note priority="1" from="description"> hero section header author last name</note>
+        <note priority="1" from="meaning">author last name </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/hero-section/hero-section.component.html</context><context context-type="linenumber">5</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/contact/contact.component.html</context><context context-type="linenumber">34</context></context-group></trans-unit><trans-unit id="app-author-job-title" datatype="html">
+        <source>Full Stack Developer</source><target state="final">Full Stack Developer</target>
+        
+        <note priority="1" from="description"> job title of the author</note>
+        <note priority="1" from="meaning">author job title </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/hero-section/hero-section.component.html</context><context context-type="linenumber">7</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/home/home.component.html</context><context context-type="linenumber">19</context></context-group></trans-unit><trans-unit id="app-link-to-about" datatype="html">
+        <source>Know more about me</source><target state="final">Know more about me</target>
+        
+        <note priority="1" from="description"> navigation link to about page</note>
+        <note priority="1" from="meaning">link to about page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/hero-section/hero-section.component.html</context><context context-type="linenumber">15</context></context-group></trans-unit><trans-unit id="app-text-contact" datatype="html">
+        <source>Contact</source><target state="final">Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-text-create-something-beautiful" datatype="html">
+        <source>Lets create something beautiful together</source><target state="final">Lets create something beautiful together</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-text-contact-me-to-start" datatype="html">
+        <source>Contact me to get started as soon as possible</source><target state="final">Contact me to get started as soon as possible</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit><trans-unit id="app-header-author-get-in-touch" datatype="html">
+        <source>Get in touch
+          with Shantanu
+        </source><target state="final">Get in touch
+          with Shantanu
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">get in thouch with author header</note>
+      </trans-unit><trans-unit id="app-text-call-now" datatype="html">
+        <source>CALL NOW</source><target state="final">CALL NOW</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">call now button</note>
+      </trans-unit><trans-unit id="app-text-drop-mail" datatype="html">
+        <source>DROP
+            MAIL</source><target state="final">DROP
+            MAIL</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">drop mail button</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center jumbotron mb-0">
+  <div class="container bg-white px-4" style="max-width: 480px">
+    <h4 class="font-weight-bold my-4">Sign up with email</h4>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate #form="ngForm">
+      <div *ngIf="signupForm.errors?.accountError" class="alert alert-danger" role="alert">
+        {{signupForm.errors?.accountError}}
+      </div>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+
+        <input type="text" class="form-control is-valid" id="name" placeholder="Enter a name" formControlName="name"
+          [class.is-invalid]="name.invalid && (name.dirty || name.touched || form.submitted)"
+          [class.is-valid]="name.valid && (name.dirty || name.touched)">
+
+        <div class="invalid-feedback">
+          <div *ngIf="name.errors?.required">Name is required</div>
+          <div *ngIf="name.errors?.maxlength">Name can be a maximum of 40 characters</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+
+        <input type="email" class="form-control" id="email1" placeholder="Enter your email address"
+          aria-describedby="emailHelp" formControlName="email"
+          [class.is-invalid]="email.invalid && (email.dirty || email.touched || form.submitted)"
+          [class.is-valid]="email.valid && (email.dirty || email.touched)">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+        <div class="invalid-feedback">
+          <div *ngIf="email.errors?.required">Email address is required</div>
+          <div *ngIf="email.errors?.email">Email Address must be valid</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+
+        <input type="password" class="form-control" id="password" placeholder="Create a password"
+          formControlName="password"
+          [class.is-invalid]="password.invalid && (password.dirty || password.touched || form.submitted)"
+          [class.is-valid]="password.valid && (password.dirty || password.touched)">
+
+        <div class="invalid-feedback">
+          <div *ngIf="password.errors?.required">Password is required</div>
+          <div *ngIf="password.errors?.minlength">Password must be at least 4 characters long</div>
+          <div *ngIf="password.errors?.maxlength">Password can be a maximum of 40 characters</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-block btn-primary mt-4">Sign Up</button>
+    </form>
+    <p class="text-center mt-4">Already have an account? <a routerLink="/sign-in">Sign in</a></p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <p class="mb-2 text-primary text-uppercase font-weight-bold">Popular Posts</p>
+
+    <div *ngFor="let post of popularPosts" class="media mb-4">
+      <img width="80" [src]="post.thumbnailUrl" class="align-self-start mt-2 mr-3" [alt]="post.title + '- image'">
+      <div class="media-body">
+        <a [routerLink]="'/blog/posts/' + post.postId" class="text-dark mt-0">
+          {{post.title}}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
